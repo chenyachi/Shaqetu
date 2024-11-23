@@ -69,6 +69,11 @@
 				        bottom: 0.7em;
 				        right: 1em;
 				    }
+				    .optional-text {
+				        color: #666;
+				        font-size: 0.9em;
+				        font-weight: normal;
+				    }
 				</style>
 	</head>
 	<body class="is-preload">
@@ -350,8 +355,8 @@
 									<input type="tel" name="phone" id="phone" required />
 								</div>
 								<div class="field">
-									<label for="email">Email</label>
-									<input type="email" name="email" id="email" required />
+									<label for="email">Email <span class="optional-text">(選填)</span></label>
+									<input type="email" name="email" id="email" />
 								</div>
 								<div class="field" id="productList">
 									<div class="product-item">

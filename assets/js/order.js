@@ -16,7 +16,7 @@ function submitOrder(event) {
     const orderData = {
         name: formData.get('name'),
         phone: formData.get('phone'),
-        email: formData.get('email'),
+        email: formData.get('email') || '無',
         delivery: formData.get('delivery'),
         message: formData.get('message')
     };
@@ -25,11 +25,12 @@ function submitOrder(event) {
     emailjs.send('service_9or6e5q', 'template_h1ifm8t', {
         to_name: "雪Q兔創意甜點坊",
         from_name: orderData.name,
-        reply_to: orderData.email,
+        reply_to: orderData.email === '無' ? 'noreply@example.com' : orderData.email,
         phone_number: orderData.phone,
         order_details: orderItems,
         delivery_method: orderData.delivery,
-        message: orderData.message || "無"
+        message: orderData.message || "無",
+        customer_email: orderData.email
     })
     .then(function(response) {
         alert('訂單已成功送出！我們會盡快與您聯繫。');
