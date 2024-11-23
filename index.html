@@ -23,7 +23,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!-- Facebook -->
-	    <meta property="og:type" content="website" /> <!-- 類型 -->
+	    <meta property="og:type" content="website" />
 	    <meta property="og:title" content="雪Q兔創意甜點坊" />
 	    <meta property="og:image" content="https://chenyachi.github.io/Shaqetu/images/first1.jpg">
 	    <meta property="og:description" content="在雪Q兔五年的歷程中，我們秉持著精心、健康、營養無負擔的理念製作手作甜點，以滿足各年齡層的口味需求。透過細心挑選的天然食材，我們的產品以頂級的日本寒天和100%純鮮奶為基礎，確保每位顧客都能品味到最純粹的美味。我們深信，這樣健康又美味的甜點體驗，將創造出您與親朋好友共同分享、共度甜蜜時光的特別體驗。" />
@@ -33,6 +33,14 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://kit.fontawesome.com/3cdc0b760f.js" crossorigin="anonymous"></script>
+		<!-- EmailJS -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function() {
+				emailjs.init("_SwT2D6jTWkRw1Lcd"); // 請替換成您的 EmailJS public key
+			})();
+		</script>
+		<script src="assets/js/order.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -250,7 +258,7 @@
 									</a>
 									<div class="caption">
 										<h3>媽媽好神俗女家務事-真心推薦</h3>
-										<p>衷心感謝媽媽好神俗女家務事製作單位，熱情邀請我們參與他們的節目，並且在節目中分享更多我們的商品與故事!
+										<p>衷心感謝媽媽好神俗女家務事製作單位，熱情邀請我們參與他們的節目，並且在節目中分享更多我們的商品與故事！
 </p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
@@ -297,75 +305,67 @@
 
 					</section>
 
-				<!-- Six -->
-					<!-- <section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Ipsum sed consequat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
-							<div class="items style1 medium onscroll-fade-in">
-								<section>
-									<span class="icon style2 major fa-gem"></span>
-									<h3>Lorem</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-save"></span>
-									<h3>Ipsum</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-chart-bar"></span>
-									<h3>Dolor</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-wifi"></span>
-									<h3>Amet</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-cog"></span>
-									<h3>Magna</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-paper-plane"></span>
-									<h3>Tempus</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-desktop"></span>
-									<h3>Aliquam</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-sync-alt"></span>
-									<h3>Elit</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-hashtag"></span>
-									<h3>Morbi</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-bolt"></span>
-									<h3>Turpis</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-envelope"></span>
-									<h3>Ultrices</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-leaf"></span>
-									<h3>Risus</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
+				<!-- 訂購表單 -->
+				<section class="wrapper style1 align-center" id="order">
+					<div class="inner">
+						<h2>線上訂購</h2>
+						<p>請填寫以下表單進行訂購，我們會盡快與您聯繫確認訂單細節。</p>
+						<form id="orderForm" onsubmit="return submitOrder(event)">
+							<div class="fields">
+								<div class="field half">
+									<label for="name">姓名</label>
+									<input type="text" name="name" id="name" required />
+								</div>
+								<div class="field half">
+									<label for="phone">聯絡電話</label>
+									<input type="tel" name="phone" id="phone" required />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" required />
+								</div>
+								<div class="field" id="productList">
+									<div class="product-item">
+										<div class="field">
+											<label>訂購商品 #1</label>
+											<select name="product[]" class="product-select" required>
+												<option value="">請選擇商品</option>
+												<option value="雪Q兔奶酪-原味">雪Q兔奶酪-原味</option>
+												<option value="雪Q兔奶酪-可可">雪Q兔奶酪-可可</option>
+												<option value="雪Q兔奶酪-草莓">雪Q兔奶酪-草莓</option>
+												<option value="沙皮狗奶酪-OREO">沙皮狗奶酪-OREO</option>
+												<option value="沙皮狗奶酪-伯爵">沙皮狗奶酪-伯爵</option>
+												<option value="寒天水果球">寒天水果球</option>
+											</select>
+										</div>
+										<div class="field">
+											<label>數量</label>
+											<input type="number" name="quantity[]" class="quantity-input" min="1" required />
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<button type="button" class="button" onclick="addProduct()">+ 新增商品</button>
+								</div>
+								<div class="field">
+									<label for="delivery">取貨方式</label>
+									<select name="delivery" id="delivery" required>
+										<option value="">請選擇取貨方式</option>
+										<option value="自取">自取</option>
+										<option value="宅配">宅配(地址填寫於備註欄位)</option>
+									</select>
+								</div>
+								<div class="field">
+									<label for="message">備註</label>
+									<textarea name="message" id="message" rows="3"></textarea>
+								</div>
 							</div>
-						</div>
-					</section> -->
+							<ul class="actions special">
+								<li><input type="submit" value="送出訂單" class="button primary" /></li>
+							</ul>
+						</form>
+					</div>
+				</section>
 
 				<!-- Footer -->
 				<style>
@@ -395,5 +395,31 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			function addProduct() {
+				var productList = document.getElementById('productList');
+				var productItem = document.createElement('div');
+				productItem.className = 'product-item';
+				productItem.innerHTML = `
+					<div class="field">
+						<label>訂購商品</label>
+						<select name="product[]" class="product-select" required>
+							<option value="">請選擇商品</option>
+							<option value="雪Q兔奶酪-原味">雪Q兔奶酪-原味</option>
+							<option value="雪Q兔奶酪-可可">雪Q兔奶酪-可可</option>
+							<option value="雪Q兔奶酪-草莓">雪Q兔奶酪-草莓</option>
+							<option value="沙皮狗奶酪-OREO">沙皮狗奶酪-OREO</option>
+							<option value="沙皮狗奶酪-伯爵">沙皮狗奶酪-伯爵</option>
+							<option value="寒天水果球">寒天水果球</option>
+						</select>
+					</div>
+					<div class="field">
+						<label>數量</label>
+						<input type="number" name="quantity[]" class="quantity-input" min="1" required />
+					</div>
+				`;
+				productList.appendChild(productItem);
+			}
+		</script>
 	</body>
 </html>
