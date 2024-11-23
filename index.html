@@ -41,6 +41,35 @@
 			})();
 		</script>
 		<script src="assets/js/order.js"></script>
+		<style>
+				    .icons li {
+				        margin: 15px; /* 可以根據需要調整按鈕之間的間距 */
+				    }
+				    .product-item {
+				        position: relative;
+				        padding: 1em;
+				        padding-bottom: 2.5em;
+				        margin-bottom: 1em;
+				        border: 1px solid rgba(0, 0, 0, 0.1);
+				        border-radius: 4px;
+				    }
+				    .button.small {
+				        font-size: 0.7em;
+				        padding: 0.3em 0.8em;
+				        background-color: #f8f9fa;
+				        color: #666;
+				        border: 1px solid #ddd;
+				    }
+				    .button.small:hover {
+				        background-color: #e9ecef;
+				        color: #333;
+				    }
+				    .remove-button {
+				        position: absolute;
+				        bottom: 0.7em;
+				        right: 1em;
+				    }
+				</style>
 	</head>
 	<body class="is-preload">
 
@@ -342,6 +371,9 @@
 											<label>數量</label>
 											<input type="number" name="quantity[]" class="quantity-input" min="1" required />
 										</div>
+										<div class="remove-button">
+											<button type="button" class="button small" onclick="removeProduct(this)">✕ 移除</button>
+										</div>
 									</div>
 								</div>
 								<div class="field">
@@ -398,11 +430,12 @@
 		<script>
 			function addProduct() {
 				var productList = document.getElementById('productList');
+				var productCount = productList.getElementsByClassName('product-item').length + 1;
 				var productItem = document.createElement('div');
 				productItem.className = 'product-item';
 				productItem.innerHTML = `
 					<div class="field">
-						<label>訂購商品</label>
+						<label>訂購商品 #${productCount}</label>
 						<select name="product[]" class="product-select" required>
 							<option value="">請選擇商品</option>
 							<option value="雪Q兔奶酪-原味">雪Q兔奶酪-原味</option>
@@ -417,8 +450,22 @@
 						<label>數量</label>
 						<input type="number" name="quantity[]" class="quantity-input" min="1" required />
 					</div>
+					<div class="remove-button">
+						<button type="button" class="button small" onclick="removeProduct(this)">✕ 移除</button>
+					</div>
 				`;
 				productList.appendChild(productItem);
+			}
+
+			function removeProduct(button) {
+				var productItem = button.closest('.product-item');
+				productItem.remove();
+				// 更新所有商品的編號
+				var items = document.getElementsByClassName('product-item');
+				for(var i = 0; i < items.length; i++) {
+					var label = items[i].querySelector('label');
+					label.textContent = '訂購商品 #' + (i + 1);
+				}
 			}
 		</script>
 	</body>
